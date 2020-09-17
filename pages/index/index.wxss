@@ -1,23 +1,47 @@
 /**index.wxss**/
+
+.index-search-box {
+  padding: 0 36rpx;
+  margin-top: 30rpx;
+}
+
 .index-search {
   position: relative;
-  margin-top: 17px;
-  padding: 0 15px;
+  background-color: #ffffff !important;
+  border-radius: 7rpx;
+  overflow: hidden;
+  z-index: 2;
 }
 
 .index-search-icon {
   position: absolute;
   top: 50%;
-  right: 38px;
+  right: 38rpx;
   transform: translate(0,-50%);
+  z-index: 2;
 }
 
 .index-search-input {
-  padding-left: 15px;
-  height: 27px;
-  line-height: 27px;
-  border: 1px solid #eee;
-  border-radius: 3px;
+  padding-left: 30rpx;
+  height: 27rpx;
+  line-height: 27rpx;
+  border: 1rpx solid #eee;
+}
+
+.input-placeholder {
+  padding: 0 0 0 30rpx;
+}
+
+.index-swiper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.index-swiper-item {
+  background: #000;
 }
 
 .index-swiper-item image {

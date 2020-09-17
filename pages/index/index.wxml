@@ -1,13 +1,15 @@
 <!--index.wxml-->
 <view class="index">
-  <view class="index-search">
-    <icon type="search" class="index-search-icon" size="17"/>
-    <input type="text" placeholder="请输入搜索内容" class="index-search-input"/>
+  <view class="index-search-box" >
+    <view class="index-search">
+      <icon type="search" class="index-search-icon" size="17"/>
+      <input type="text" placeholder="请输入搜索内容" class="index-search-input" />
+    </view>
   </view>
 
-  <swiper autoplay class="index-swiper">
-    <swiper-item class="index-swiper-item">
-      <image src="" />
+  <swiper autoplay class="index-swiper" indicator-dots indicator-active-color="#fff" interval="3000" circular>
+    <swiper-item wx:for="{{bannerList}}" class="index-swiper-item">
+      <image src="{{item.imageUrl}}" />
     </swiper-item>
   </swiper>
 </view>
