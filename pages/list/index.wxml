@@ -1,0 +1,26 @@
+<!--pages/list/index.wxml-->
+<view class="list">
+    <view wx:for="{{list}}" wx:key="id" class="list-view" bind:tap="handleTap" data-id='{{item.id}}'>
+        <image class="list-image-desc" src="{{item.artists[0].img1v1Url}}" />
+        <view class="list-right-desc" >
+            <rich-text  class="list-text-title" nodes="{{item.newName}}" />
+            <text wx:for="{{item.artists}}" wx:key="id" class="list-text-desc" >
+                {{item.name}}
+            </text>
+        </view>
+    </view>
+
+    <view wx:if="{{isPlay}}" class="play-pause-btn" >
+        <view class="play-pause-left"/>
+        <view class="play-pause-right"/>
+    </view>
+
+    <view wx:if="{{!isPlay}}" class="play-start-btn" >
+        <view class="paly-start-play" />
+    </view>
+    <view class="progress-box">
+        
+        <progress class="" percent="1" duration="{{progressDuration}}"/>
+    </view>
+        
+</view>

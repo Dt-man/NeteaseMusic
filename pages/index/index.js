@@ -14,11 +14,13 @@ Page({
   // 获取轮播图
   getBannerList() {
     banner({params:{type:1}}).then(res => {
-      console.log(res);
       this.setData({
         bannerList:res.banners
       })
-      console.log(this.data.bannerList);
     })
+  },
+  // 跳转搜索页面
+  toSearch() {
+     wx.navigateTo({url: '/pages/search/index',});
   }
 })

@@ -23,9 +23,11 @@
 
 .index-search-input {
   padding-left: 30rpx;
-  height: 27rpx;
-  line-height: 27rpx;
-  border: 1rpx solid #eee;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  /* border: 1rpx solid #eee; */
+  z-index: 2;
 }
 
 .input-placeholder {

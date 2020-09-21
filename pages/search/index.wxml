@@ -1,0 +1,26 @@
+<!-- pages/search/index.wxml -->
+<view class="search">
+    <view class="search-content">
+        <view class="search-box">
+            <icon type="search" class="search-icon" size="17" color="#eee"/>
+            <input 
+            value="{{keywords}}" 
+            type="text" 
+            confirm-type="search"
+            placeholder="请输入搜索内容" 
+            class="search-input" 
+            placeholder-class="search-input-placeholder" 
+            bindinput="searchInput"
+            bindconfirm="searchConfirm"
+            />
+        </view>
+        <view class="history-content">
+            <view class="history-item">123</view>
+            <view class="history-item">123</view>
+            <view class="history-item">123</view>
+            <view class="history-item">123</view>
+            <view class="history-item">123</view>
+            <view class="history-item">123</view>
+        </view>
+    </view>
+</view>
