@@ -22,10 +22,12 @@
 }
 
 .index-search-input {
+  padding: 0;
   padding-left: 30rpx;
   height: 50rpx;
-  line-height: 50rpx;
+  line-height: 50rpx !important;
   font-size: 30rpx;
+  font-weight: 400;
   /* border: 1rpx solid #eee; */
   z-index: 2;
 }

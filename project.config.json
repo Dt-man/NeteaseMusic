@@ -22,7 +22,7 @@
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
     "useMultiFrameRuntime": false,
-    "useApiHook": true,
+    "useApiHook": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -36,7 +36,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.13.0",
-  "appid": "wx760eb6b496ef4fb2",
+  "appid": "wx12736101b5a0c16d",
   "projectname": "NeteaseMusic",
   "debugOptions": {
     "hidedInDevtools": []
