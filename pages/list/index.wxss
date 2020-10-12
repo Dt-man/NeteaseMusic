@@ -49,6 +49,25 @@
     background-color: #ea5455;
 }
 
+.spot {
+    position: absolute;
+    width: 50rpx;
+    bottom: 75rpx;
+    right: 0rpx;
+    transform: translate(-50%,0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spot-item {
+    margin: 5px 0 0;
+    width: 10rpx;
+    height: 10rpx;
+    background-color: #010101;
+    border-radius: 50%;
+}
+
 .list-text-title {
     display: block;
     width:500rpx;

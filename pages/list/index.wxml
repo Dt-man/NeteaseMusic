@@ -14,6 +14,13 @@
             <view wx:if="{{musicId === item.id && isPlay }}" class="list-right-pause-left" />
             <view wx:if="{{musicId === item.id && isPlay }}" class="list-right-pause-right" />
         </view>
+
+        <view class="spot" bind:tap="handleTapSpot" data-id='{{item.id}}'>
+            <view class="spot-item" />
+            <view class="spot-item" />
+            <view class="spot-item" />
+        </view>
+            
     </view>
 
     <view wx:if="{{isPlay}}" class="play-pause-btn" bind:tap="handleTap" data-id="{{musicId}}">

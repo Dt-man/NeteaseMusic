@@ -66,9 +66,55 @@ Page({
       setInterval(()=>{
         this.data.musicCurrentTime ++
       },1000)
+      wx.hideLoading()
+
     }).finally(() => {
       wx.hideLoading()
     })
+  },
+  /**
+   * 三个小点点击
+   * @param {*} options 
+   */
+  handleTapSpot(e) {
+    wx.showActionSheet({
+      itemList: ['下载', '取消'],
+      success (res) {
+        if(res.tapIndex === 1) return 
+        wx.showLoading({title:'下载中...'})
+        getMusicUrl({id: e.target.dataset.id}).then(res => {
+          wx.hideLoading()
+           wx.downloadFile({
+            url: res.url,
+            success: (result)=>{
+              
+              wx.saveFile({
+                tempFilePath: result.tempFilePath,
+                success: (result)=>{
+                  wx.openDocument({
+                    filePath: result.savedFilePath,
+                    success: function (res) {
+                      console.log(res)
+                      
+                    },
+                  });
+                },
+                fail: ()=>{},
+                complete: ()=>{}
+              });
+            },
+            fail: ()=>{},
+            complete: (e)=>{
+              console.log(e);
+            }
+          });
+        })
+      },
+      fail (res) {
+        console.log(res.errMsg)
+      }
+    })
+    
   },
 
   /**
